@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 
 
-namespace ConsoleApp1
+namespace Calculatrice
 {
 
     class Program
@@ -23,10 +23,11 @@ namespace ConsoleApp1
         #endregion private attributes
         static void Main(string[] args)
         {
-            Console.Write("Rentrer les deux valeurs : ");
-            Console.ReadLine();
-            operande1 = Console.Read();
-            operande2 = Console.Read();
+            Console.Write("Rentrer la première opérande : ");
+            operande1 = int.Parse(Console.ReadLine());
+            Console.Write("Rentrer la deuxième opérande : ");
+            operande2 = int.Parse(Console.ReadLine());
+            Console.Clear();
             for ( operation = 1; operation < 5; operation++)
             {
                 resultat = Calcul(operande1, operande2);
@@ -35,8 +36,6 @@ namespace ConsoleApp1
 
             }
             Console.ReadLine();
-
-
         }
          private static float Calcul (float op1, float op2)
         {
